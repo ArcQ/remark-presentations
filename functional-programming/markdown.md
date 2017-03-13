@@ -7,8 +7,8 @@ class: inverse hljs-default
 # Agenda
 
 1. What it is
-  a. Intro
-  b. Core Concepts
+  * Intro
+  * Core Concepts
 2. Why does it matter?
 3. Cool Demo
 
@@ -171,7 +171,7 @@ class: inverse hljs-default center
 
 # Simpler to maintain
 
-*video*
+[functional programming vs lines of code](assets/video.mp4)
 
 ---
 
@@ -252,46 +252,47 @@ class: center
 
 # Variables
 
-- represent a single point in time
+```js
+x = 1;
+x = 50;
+```
 
+- represent a single point in time
 - single-thread + single timeline
 - issues with concurrency
 
-- things don't change in place, time as a dimension
-- the future is a function of the past and doesn't change it
+"Things don't change in place when you include time as a dimension. The future cannot change the past, but is a function of the past" - Rich Hickey
 
 ---
 
-# Immutability  
+# State as a Function of Time
 
-not something that just knwoing how to write pure functions can solve
+you could, but it's probably very hard to start writing your entire program in pure functions, so how can you do this?
 ```js
-function getY() {
-  return y = x +1;
+// current state = { seconds: 0 };
+function getNextState() {
+  return newState = { seconds: currentState.seconds +1 };
 }
-
-x = 1;
-x = 50;
-
-assert.equal(getY(), getY());
+let currentState = getNextState();
+/*{ seconds: 0 }
+{ seconds: 1 }
+{ seconds: 2 }
+{ seconds: 3 }...*/
 ```
 ---
 
-immutability
-diffs
+Immutability and Persistent Data Structures
+
+- makes it much cheaper to create clones of your state
+- state is now a function of your time
 
 ---
 
-immutability
-persistent data structures (linked lists) diffs
+# Redux Demo
 
 ---
 
-# Why now?
-memory
+# What is the Future of Functional Programming?
+[performance-of-cpu](assets/performance-of-cpu.jpg)
 
----
-
-# Why now?
-cores
 ---
