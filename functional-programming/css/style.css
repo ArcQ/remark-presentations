@@ -1,0 +1,227 @@
+/* Basic theme for remark slides
+adapted from http://www.lendmeyourear.net/wp-content/uploads/remark-template-basic.css*/
+
+@font-face {
+    font-family: "Yanone Kafeesatz";
+    src: url(fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.ttf);
+}
+@font-face {
+    font-family: "Ubuntu Mono";
+    src: url(fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf);
+}
+
+* {
+  .box-sizing(border-box);
+}
+*:before,
+  *:after {
+    .box-sizing(border-box);
+  }
+
+  html {
+    font-size: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 1.5;
+    color: #555555;
+    background-color: #FFFFFF;
+  }
+
+  a {
+    color: #00989e;
+    text-decoration: none;
+  }
+
+  a:hover, a:focus {
+    color: #00989e;
+    text-decoration: underline;
+  }
+
+  a:focus {
+    outline: 3px solid #00989e;
+    outline-offset: 0;
+    background-color: #00989e;
+    color: #FFF;
+    text-decoration: none;
+  }
+
+  ol {
+    padding: 0 0 0 1.5em;
+    margin: 1em 0;
+  }
+
+  ul {
+    margin: 1em 0;
+    padding: 0 0 0 1em;
+  }
+
+  img {
+    vertical-align: middle;
+    max-height: 600px;
+    margin: 0 auto 1em;
+    display: block;
+  }
+
+  hr {
+    height: 0;
+    margin: 1em 0;
+    border: 0;
+    border-top: 1px solid #cccccc;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+		font-family:"Yanone Kafeesatz"; !important
+    font-weight: 500;
+    margin: 1em 0 0.5em;
+  }
+
+  b,
+  strong {
+    font-weight: 500;
+  }
+
+  blockquote {
+    border-left: 5px solid #cccccc;
+    padding-left: 1em;
+    margin: 1em -1em;
+    font-style: italic;
+    color: #999999;
+  }
+
+  .remark-slide-number {
+    display: none;
+  }
+
+  .remark-slide {
+    display: table;
+  }
+
+  .remark-slide-content {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 4em;
+    font-size: 24px;
+  }
+
+  .remark-slide-content h1 {
+    font-size: 61px;
+    color: #00989e;
+  }
+
+  .remark-slide-content h2 {
+    font-size: 53px;
+    color: #00989e;
+  }
+
+  .remark-slide-content h3 {
+    font-size: 45px;
+    color: #00989e;
+  }
+
+  .remark-slide-content h4 {
+    font-size: 41px;
+    color: #00989e;
+  }
+
+  .remark-slide-content h5 {
+    font-size: 35px;
+    color: #00989e;
+  }
+
+  .remark-slide-content h6 {
+    font-size: 29px;
+    color: #00989e;
+  }
+
+  .remark-slide-content > :first-child {
+    margin-top: 0;
+  }
+
+  .remark-slide-content > :last-child {
+    margin-bottom: 0;
+  }
+
+  .remark-code-line {
+    background-color: #333;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 0 1em;
+  }
+  
+  .inverse {
+    background: #272822;
+    color: #777872;
+    text-shadow: 0 0 20px #333;
+  }
+
+  .inverse h1, .inverse h2 {
+    color: #f3f3f3;
+    line-height: 0.8em;
+  }
+
+  pre {
+    border-left: 0.4em solid #d7d7d7;
+    padding: 1em;
+  }
+
+  code {
+    background: transparent !important;
+  }
+
+  a {
+    color: #F92672;
+    text-decoration: none;
+  }
+
+  .task {
+    float: right;
+    font-size: 0.9em;
+    padding-top: 0.6em;
+  }
+
+  .task a {
+    color: #080;
+    text-decoration: none;
+  }
+
+  .right {
+    float: right;
+    margin-left: 1em;
+  }
+
+  .pushdown {
+    margin-top: 12em;
+  }
+
+  .front{
+    background:black;
+    color: white;
+    text-shadow: 0 0 20px #333;
+  }
+  
+  .rightSplit {
+    float:right;
+    width: 45%;
+  }
+  
+  .rightSplit pre{
+    border-left:none;
+    padding:0px;
+  }
+
+  .leftSplit {
+    float:left;
+    width:45%
+  }
+
+  .leftSplit pre{
+    border-left:none;
+    padding:0px;
+  }
+
