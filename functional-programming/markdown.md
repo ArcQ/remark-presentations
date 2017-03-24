@@ -7,14 +7,54 @@ class: inverse hljs-default
 # Agenda
 
 1. What it is
-  * Intro
-  * Core Concepts
 2. Why does it matter?
 3. Cool Demo
 
 ---
 
-# what is a function?
+.leftSplit[
+
+##### Imperative
+
+```js
+let str = "Hi, I'm string 1!";
+str = "Hi, I'm string 2!";
+console.log(str);
+
+// Hi, I'm string 1!. => Hi, I'm string 2!
+
+```
+]
+
+.rightSplit[
+
+##### Functional (declarative)
+
+```js
+
+function fix(str) {
+  return newStr = "Hi, I'm string 2!"
+}
+
+let str = "Hi, I'm string 1!"
+let newStr = fix(str);
+console.log(newStr);
+
+// Hi, I'm string 1! => Hi, I'm string 2!
+```
+]
+
+---
+```js
+Rx.Observable.fromEvent(worker, 'message')
+              .map(function (ev) { return ev.data * 1; })
+              .buffer(Rx.Observable.interval(500))
+              .where(function (x) { return x.length > 0; })
+              .map(function (x) { return x.length; });
+```
+---
+
+# What is a function?
 
 ```javascript
 
@@ -27,57 +67,6 @@ return number + 1;
 A function is something that takes in an **input** and returns an **output**
 
 ---
-
-.leftSplit[
-
-##### Imperative
-
-```js
-let str = "Perry is awesome.";
-str = "Eddie is also awesome!";
-console.log(str);
-
-// Perry is awesome. => Eddie is also awesome!
-
-```
-]
-
-.rightSplit[
-
-##### Functional (declarative)
-
-```js
-
-function fix(str) {
-  return newStr = "Eddie is also awesome!"
-}
-
-let str = "Perry is awesome."
-let newStr = fix(str);
-console.log(newStr);
-
-// Perry is awesome => Eddie is also awesome!
-```
-]
-
----
-```js
- ask([TECH_STACK])()
-      .then(mergeConfig)
-      .then(ask([REPO_NAME]))
-      .then(mergeConfig)
-      .then(ask([USE_HTTPS]))
-      .then(ask([USE_REPO]))
-      .then(mergeConfig)
-      .then(askRepoDetails)
-      .then(resolve)
-      .then(null, reject);
-```
----
-class: inverse hljs-default center
-# Core Concepts
----
-
 # Pure Functions
 
 .leftSplit[
@@ -115,7 +104,6 @@ let finalAgain = add(1);
 
 - given the same input, returns the same result everytime
 - have no **side-effects**
-- side-effects are the root of all evil
 
 ---
 
@@ -148,19 +136,19 @@ let addTwo = modifyAdd(addOne);
 Mutable
 
 ```javascript
-let obj = { greeting = "hi" };
+let obj = { greeting:"hi", to:"everone"};
 obj.greeting = "hello";
-// obj = { greeting = "hello" };
+// obj = { greeting = "hello", to:"everyone" };
 ```
 
 Immutable
 
 ```javascript
-let obj = { greeting = "hi" };
+let obj = { greeting:"hi", to:"everyone"};
 let newObj = _clone(obj);
 newObj.greeting = "hello";
-// obj = { greeting = "hi" };
-// newObj = { greeting = "hello" };
+// obj = { greeting = "hi", to:"everyone"};
+// newObj = { greeting = "hello", to:"everyone"};
 ```
 
 ---
@@ -171,7 +159,7 @@ class: inverse hljs-default center
 
 # Simpler to maintain
 
-[functional programming vs lines of code](assets/video.mp4)
+[functional programs have less lines of code](assets/less-lines-of-code.mp4)
 
 ---
 
@@ -186,7 +174,7 @@ function modifyArray(array){
 }
 ```
 
-- lodash, ramda, underscore 
+- [ramda](http://ramdajs.com/docs/), lodash, underscore 
 
 ---
 
@@ -204,7 +192,7 @@ let sumOfEvenSquares = _.chain(numbers)
 
 # Simple vs Easy
 
-image
+![simple vs easy](assets/simplevseasy.jpg)
 
 ---
 
@@ -267,7 +255,6 @@ x = 50;
 
 # State as a Function of Time
 
-you could, but it's probably very hard to start writing your entire program in pure functions, so how can you do this?
 ```js
 // current state = { seconds: 0 };
 function getNextState() {
@@ -281,10 +268,11 @@ let currentState = getNextState();
 ```
 ---
 
-Immutability and Persistent Data Structures
+# Immutability and Persistent Data Structures
 
 - makes it much cheaper to create clones of your state
 - state is now a function of your time
+.rightSplit[![immutability structural sharing](assets/immutable-structural-sharing.png)]
 
 ---
 
@@ -293,6 +281,8 @@ Immutability and Persistent Data Structures
 ---
 
 # What is the Future of Functional Programming?
-[performance-of-cpu](assets/performance-of-cpu.jpg)
+![performance-of-cpu](assets/performance-of-cpu.jpg)
 
 ---
+
+# That's it! Questions?

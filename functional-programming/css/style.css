@@ -1,6 +1,15 @@
 /* Basic theme for remark slides
 adapted from http://www.lendmeyourear.net/wp-content/uploads/remark-template-basic.css*/
 
+@font-face {
+    font-family: "Yanone Kafeesatz";
+    src: url(fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.ttf);
+}
+@font-face {
+    font-family: "Ubuntu Mono";
+    src: url(fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf);
+}
+
 * {
   .box-sizing(border-box);
 }
@@ -66,8 +75,8 @@ adapted from http://www.lendmeyourear.net/wp-content/uploads/remark-template-bas
     border-top: 1px solid #cccccc;
   }
 
-
   h1, h2, h3, h4, h5, h6 {
+		font-family:"Yanone Kafeesatz"; !important
     font-weight: 500;
     margin: 1em 0 0.5em;
   }
